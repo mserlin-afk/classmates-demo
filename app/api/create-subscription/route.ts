@@ -19,26 +19,22 @@ const PLANS: Record<string, { priceId: string; couponId: string }> = {
 };
 
 export async function POST(req: Request) {
-  const { name, email, plan = "3month" } = await req.json();
+  const { plan = "3month" } = await req.json();
 
   const planConfig = PLANS[plan];
   if (!planConfig) {
     return NextResponse.json({ error: "Invalid plan" }, { status: 400 });
   }
 
-  const customer = await stripe.customers.create({ name, email });
+  const origin = req.headers.get("origin") ?? `https://${req.headers.get("host")}`;
 
-  const subscription = await stripe.subscriptions.create({
-    customer: customer.id,
-    items: [{ price: planConfig.priceId }],
+  const session = await stripe.checkout.sessions.create({
+    mode: "subscription",
+    line_items: [{ price: planConfig.priceId, quantity: 1 }],
     discounts: [{ coupon: planConfig.couponId }],
-    payment_behavior: "default_incomplete",
-    payment_settings: { save_default_payment_method: "on_subscription" },
-    expand: ["latest_invoice", "latest_invoice.confirmation_secret"],
+    success_url: `${origin}/?checkout=success`,
+    cancel_url: `${origin}/`,
   });
 
-  const invoice = subscription.latest_invoice as Stripe.Invoice;
-  const clientSecret = invoice.confirmation_secret?.client_secret;
-
-  return NextResponse.json({ clientSecret });
+  return NextResponse.json({ url: session.url });
 }

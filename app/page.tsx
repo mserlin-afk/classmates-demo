@@ -66,7 +66,7 @@ export default function SubscribePage() {
 
           {/* qZ6KLO5-n9GBaXSjC+Kkfg== col-lg-2 — person photo omitted (hotlink protected) */}
           <div style={{ flex: "0 0 16.667%", maxWidth: "16.667%", display: "flex", justifyContent: "flex-end", alignItems: "flex-start" }}>
-            <img src="https://c.cmcdn.com/v/O/w/N/1594314492592.png" alt="Introductory Offer 50% OFF" style={{ width: 90 }} />
+            <img src="https://c.cmcdn.com/v/O/w/N/1594314492592.png" alt="Introductory Offer 50% OFF" style={{ width: 180 }} />
           </div>
 
         </div>
@@ -75,11 +75,11 @@ export default function SubscribePage() {
         <div style={{
           border: "1px solid #ccc",
           borderRadius: 4,
-          padding: "10px 14px",
+          padding: "18px 20px",
           backgroundColor: "#fafafa",
           marginBottom: 20,
         }}>
-          <p style={{ fontSize: 12, color: "#555", lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>
+          <p style={{ fontSize: 15, color: "#555", lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>
             <b>Billing Terms:</b> You will be billed {billing.today} today and then your Classmates+
             subscription plan will renew automatically every {billing.interval} unless you choose to
             cancel before the renewal date. Your payment method will be charged the full
@@ -87,13 +87,13 @@ export default function SubscribePage() {
             subscription, log in to your account and follow the prompts on the Account &amp;
             Billing page. No portion of any subscription fee is refundable.
           </p>
-          <p style={{ fontSize: 12, color: "#555", lineHeight: 1.5, margin: "6px 0 0", fontStyle: "italic" }}>
+          <p style={{ fontSize: 15, color: "#555", lineHeight: 1.6, margin: "10px 0 0", fontStyle: "italic" }}>
             All applicable state and local taxes will be added to the subscription fee.
           </p>
         </div>
 
         {/* Plan heading — _1fImrJUpql0MN4KxNJWxtQ== (teal) */}
-        <div style={{ color: "#0e8893", fontWeight: "bold", fontSize: 17, marginBottom: 10 }}>
+        <div style={{ color: "#0e8893", fontWeight: "bold", fontSize: 20, marginBottom: 12 }}>
           Select your plan below:
         </div>
 
@@ -116,15 +116,15 @@ export default function SubscribePage() {
               cursor: "pointer",
             }}>
             <div style={{ backgroundColor: "#cfe7e9", padding: "6px 12px", textAlign: "center" }}>
-              <span style={{ color: "#42362f", fontSize: 11, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1 }}>
+              <span style={{ color: "#42362f", fontSize: 13, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1 }}>
                 3 month Plan
               </span>
             </div>
             <div style={{ padding: 12, textAlign: "center" }}>
-              <div style={{ fontSize: 22, fontWeight: "bold", color: "#333" }}>
-                $3.60<span style={{ fontSize: 13, fontWeight: "normal", color: "#666" }}>/month</span>
+              <div style={{ fontSize: 26, fontWeight: "bold", color: "#333" }}>
+                $3.60<span style={{ fontSize: 15, fontWeight: "normal", color: "#666" }}>/month</span>
               </div>
-              <div style={{ fontSize: 11, color: "#666", marginTop: 4 }}>
+              <div style={{ fontSize: 13, color: "#666", marginTop: 6 }}>
                 <span><strong style={{ textDecoration: "line-through", fontWeight: "normal" }}>$21.60</strong>&nbsp;$10.80</span> for 3 month term*
               </div>
               <img
@@ -146,15 +146,15 @@ export default function SubscribePage() {
               cursor: "pointer",
             }}>
             <div style={{ backgroundColor: "#cfe7e9", padding: "6px 12px", textAlign: "center" }}>
-              <span style={{ color: "#42362f", fontSize: 11, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1 }}>
+              <span style={{ color: "#42362f", fontSize: 13, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1 }}>
                 1 year Plan
               </span>
             </div>
             <div style={{ padding: 12, textAlign: "center" }}>
-              <div style={{ fontSize: 22, fontWeight: "bold", color: "#333" }}>
-                $2.50<span style={{ fontSize: 13, fontWeight: "normal", color: "#666" }}>/month</span>
+              <div style={{ fontSize: 26, fontWeight: "bold", color: "#333" }}>
+                $2.50<span style={{ fontSize: 15, fontWeight: "normal", color: "#666" }}>/month</span>
               </div>
-              <div style={{ fontSize: 11, color: "#666", marginTop: 4 }}>
+              <div style={{ fontSize: 13, color: "#666", marginTop: 6 }}>
                 <span><strong style={{ textDecoration: "line-through", fontWeight: "normal" }}>$60.00</strong>&nbsp;$30.00</span> for 1 year term*
               </div>
             </div>
@@ -171,15 +171,15 @@ export default function SubscribePage() {
               cursor: "pointer",
             }}>
             <div style={{ backgroundColor: "#cfe7e9", padding: "6px 12px", textAlign: "center" }}>
-              <span style={{ color: "#42362f", fontSize: 11, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1 }}>
+              <span style={{ color: "#42362f", fontSize: 13, fontWeight: "bold", textTransform: "uppercase", letterSpacing: 1 }}>
                 2 year Plan
               </span>
             </div>
             <div style={{ padding: 12, textAlign: "center" }}>
-              <div style={{ fontSize: 22, fontWeight: "bold", color: "#333" }}>
-                $2.00<span style={{ fontSize: 13, fontWeight: "normal", color: "#666" }}>/month</span>
+              <div style={{ fontSize: 26, fontWeight: "bold", color: "#333" }}>
+                $2.00<span style={{ fontSize: 15, fontWeight: "normal", color: "#666" }}>/month</span>
               </div>
-              <div style={{ fontSize: 11, color: "#666", marginTop: 4 }}>
+              <div style={{ fontSize: 13, color: "#666", marginTop: 6 }}>
                 <span><strong style={{ textDecoration: "line-through", fontWeight: "normal" }}>$96.00</strong>&nbsp;$48.00</span> for 2 year term*
               </div>
               <img
@@ -193,12 +193,7 @@ export default function SubscribePage() {
         </div>
 
         {/* w8cEwtfI3f+rgQriqYSj8Q== */}
-        <div style={{ fontSize: 11, color: "#666", marginBottom: 20 }}>* Billed in one easy payment</div>
-
-        {/* Payment heading */}
-        <div style={{ color: "#0e8893", fontWeight: "bold", fontSize: 17, marginBottom: 10 }}>
-          Select your payment option:
-        </div>
+        <div style={{ fontSize: 13, color: "#666", marginBottom: 20 }}>* Billed in one easy payment</div>
 
         <CheckoutForm plan={selectedPlan} />
 
